@@ -12,18 +12,31 @@ public class AplikasiPerpustakaan {
         perpus.tambah(new Majalah("M001", "Majalah Teknologi Kita", 2026, "Agustus"));
         Anggota siti = new Anggota("2410010123", "Siti Rahmah");
         Anggota budi = new Anggota("2410010456", "Budi Santoso");
+        Anggota wayan  = new Anggota("2410010211", "Wayan Fachri");
+        perpus.tambah(new Skripsi ("F014", "membuat aplikasi perpustakaan", 2026, "Wayan Fachri", "Teknik Informatika" ));
         tampilkanDaftar(perpus);
         System.out.println();
         cetakPinjam(perpus, "B002", siti);
         cetakPinjam(perpus, "B002", budi);
         cetakPinjam(perpus, "M001", budi);
+        cetakPinjam(perpus, "F014", wayan);
         System.out.println("Peminjam B002: " + perpus.getPeminjam("B002").nama());
         System.out.println();
         cetakKembali(perpus, "B002", 2);
         cetakKembali(perpus, "M001", 3);
         System.out.println();
+        cariJudul(perpus, "laskar");
+        System.out.println();
         System.out.println("Koleksi tersedia: " + perpus.jumlahTersedia()
                 + " dari " + perpus.getDaftarKoleksi().size());
+    }
+
+    private static void cariJudul(Perpustakaan perpus, String kataKunci) {
+        System.out.println("=== Cari Judul ===");
+
+        for (Koleksi k : perpus.cariJudul(kataKunci)) {
+            System.out.println(k);
+        }
     }
 
     private static void tampilkanDaftar(Perpustakaan perpus) {
