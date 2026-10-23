@@ -60,9 +60,9 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
         mahasiswaRadioButton = new javax.swing.JRadioButton();
         dataAnggotaLabel = new javax.swing.JLabel();
         npmLabel = new javax.swing.JLabel();
-        npmField = new javax.swing.JTextField();
-        namalabel = new javax.swing.JLabel();
         namaField = new javax.swing.JTextField();
+        namalabel = new javax.swing.JLabel();
+        npmField = new javax.swing.JTextField();
         prodiLabel = new javax.swing.JLabel();
         prodiComboBox = new javax.swing.JComboBox<>();
         jenisAnggotaLabel = new javax.swing.JLabel();
@@ -198,13 +198,15 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 6, 0);
         formPanel.add(dataAnggotaLabel, gridBagConstraints);
 
-        npmLabel.setText("NPM");
+        npmLabel.setText("Nama Lengkap");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(npmLabel, gridBagConstraints);
+
+        namaField.addActionListener(this::namaFieldActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -212,9 +214,9 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
-        formPanel.add(npmField, gridBagConstraints);
+        formPanel.add(namaField, gridBagConstraints);
 
-        namalabel.setText("Nama lengkap");
+        namalabel.setText("NPM");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -228,7 +230,7 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
-        formPanel.add(namaField, gridBagConstraints);
+        formPanel.add(npmField, gridBagConstraints);
 
         prodiLabel.setText("Program studi");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -316,6 +318,10 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
             dispose();
         }
     }//GEN-LAST:event_batalButtonActionPerformed
+
+    private void namaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_namaFieldActionPerformed
 
     /**
      * @param args the command line arguments
