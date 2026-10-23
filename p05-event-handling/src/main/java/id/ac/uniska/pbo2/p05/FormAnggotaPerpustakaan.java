@@ -320,9 +320,12 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
     /**
      * @param args the command line arguments
      */
-   public static void main(String args[]) {
+public static void main(String args[]) {
         com.formdev.flatlaf.FlatLightLaf.setup();
-        java.awt.EventQueue.invokeLater(() -> new FormAnggotaPerpustakaan().setVisible(true));
+
+        java.awt.EventQueue.invokeLater(() -> {
+            new FormAnggotaPerpustakaan().setVisible(true);
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
