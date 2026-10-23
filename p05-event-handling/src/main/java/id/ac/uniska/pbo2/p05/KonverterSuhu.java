@@ -1,5 +1,6 @@
 package id.ac.uniska.pbo2.p05;
 
+
 /**
  * Logika konversi suhu tanpa GUI.
  * Dipisahkan dari tampilan agar mudah dipakai ulang dan diuji.
@@ -7,7 +8,7 @@ package id.ac.uniska.pbo2.p05;
 public final class KonverterSuhu {
 
     private KonverterSuhu() {
-        // kelas utilitas, tidak perlu dibuat object-nya
+        
     }
 
     public static double keFahrenheit(double celsius) {
