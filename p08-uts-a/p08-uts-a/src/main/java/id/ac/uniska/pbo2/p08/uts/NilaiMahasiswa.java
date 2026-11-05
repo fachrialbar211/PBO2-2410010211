@@ -6,7 +6,7 @@ package id.ac.uniska.pbo2.p08.uts;
 
 /**
  *
- * @author Fachri 
+ * @author Fachri - 2410010211
  */
 public class NilaiMahasiswa {
       private String npm;
