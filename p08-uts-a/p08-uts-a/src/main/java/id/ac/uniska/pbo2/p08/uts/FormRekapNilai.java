@@ -9,7 +9,7 @@ package id.ac.uniska.pbo2.p08.uts;
 
 /**
  *
- * @author Fachri
+ * @author Fachri - 2410010211
  */
 public class FormRekapNilai extends javax.swing.JFrame {
     
